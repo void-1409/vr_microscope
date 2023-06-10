@@ -869,7 +869,9 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Collab: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -884,11 +886,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 5105fcaa-2e3e-46ab-8e19-7da4d9a1ec58
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: VR Microscope
+  organizationId: med4pan-new
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
