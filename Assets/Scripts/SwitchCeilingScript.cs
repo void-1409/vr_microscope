@@ -6,25 +6,23 @@ using UnityEngine.XR;
 
 public class SwitchCeilingScript : MonoBehaviour
 {
-    [SerializeField] private GameObject XROrigin;
-    private InputData _inputData;
-    private bool lastButtonState = false;
+    [SerializeField] private GameObject ceilingLight;
+
+    private bool isLightOn = false;
 
     void Start()
     {
-        _inputData = XROrigin.GetComponent<InputData>();
-        Debug.Log(_inputData);
+        ceilingLight.SetActive(isLightOn);
     }
 
     void Update()
     {
-        bool tempState = false;
+    }
 
-        tempState = _inputData._rightController.TryGetFeatureValue(CommonUsages.primaryButton, out bool isPressed) && isPressed || tempState;
-
-        if (tempState != lastButtonState) {
-            Debug.Log("Primary Button Pressed");
-            lastButtonState = tempState;
-        }
+    public void changeLightState() {
+        isLightOn = !isLightOn;
+        ceilingLight.SetActive(isLightOn);
+        Debug.Log("Light State Changed!");
+        Debug.Log(isLightOn);
     }
 }

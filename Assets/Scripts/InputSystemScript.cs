@@ -18,6 +18,6 @@ public class InputSystemScript : MonoBehaviour
     {
         float isPressed = triggerButton.action.ReadValue<float>();
         
-        Debug.Log(isPressed);
+        // Debug.Log(isPressed);
     }
 }
