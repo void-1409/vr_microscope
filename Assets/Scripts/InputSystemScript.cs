@@ -32,11 +32,11 @@ public class InputSystemScript : MonoBehaviour
         // if (pressed1 > 0){
         //     Debug.Log("Button 1 pressed!");
         // }
-        float pressed2 = button2.action.ReadValue<float>();
-        if (pressed2 > 0){
-            Debug.Log("Button 2 pressed!");
-            drone.transform.Translate(Vector3.up * Time.deltaTime);
-        }
+        // float pressed2 = button2.action.ReadValue<float>();
+        // if (pressed2 > 0){
+        //     Debug.Log("Button 2 pressed!");
+        //     drone.transform.Translate(Vector3.up * Time.deltaTime);
+        // }
         // float pressed3 = button3.action.ReadValue<float>();
         // if (pressed3 > 0){
         //     Debug.Log("Button 3 pressed!");
@@ -51,7 +51,7 @@ public class InputSystemScript : MonoBehaviour
         // Vector2 joyright = joystick_right.action.ReadValue<Vector2>();
         // Debug.Log(joyright);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow)){
+        if (Input.GetKey(KeyCode.UpArrow)){
             drone.transform.Translate(Vector3.up * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.W)){
