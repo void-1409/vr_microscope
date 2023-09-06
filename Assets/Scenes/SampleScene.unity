@@ -1187,6 +1187,7 @@ GameObject:
   - component: {fileID: 1135198252}
   - component: {fileID: 1135198251}
   - component: {fileID: 1135198255}
+  - component: {fileID: 1135198256}
   m_Layer: 0
   m_Name: drone
   m_TagString: Untagged
@@ -1305,8 +1306,20 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
+--- !u!75 &1135198256
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135198250}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 9.8, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1 &1156062785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2451,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
+  drone: {fileID: 0}
 --- !u!1 &1580916599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3870,7 +3884,7 @@ MonoBehaviour:
     m_Reference: {fileID: 71106601250685021, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   joystick_left:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Joystick_left
       m_Type: 0
@@ -3880,9 +3894,10 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -7363382999065477798, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
   joystick_right:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Joystick_right
       m_Type: 0
@@ -3892,7 +3907,9 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -5913262927076077117, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  drone: {fileID: 1135198250}
 --- !u!1 &2118358665
 GameObject:
   m_ObjectHideFlags: 0
